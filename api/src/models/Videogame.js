@@ -18,7 +18,7 @@ module.exports = (sequelize) => {
       allowNull: false,
     },
     released: {
-      type: DataTypes.DATE,
+      type: DataTypes.STRING,
     },
     rating: {
       type: DataTypes.INTEGER,
@@ -29,7 +29,6 @@ module.exports = (sequelize) => {
     },
     image: {
       type: DataTypes.STRING,
-      allowNull: false,
     }
   });
 };

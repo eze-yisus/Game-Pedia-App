@@ -19,10 +19,14 @@
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
+const { preGenres } = require('./src/controllers/genreController')
 
 // Syncing all the models at once.
 conn.sync({ force: true }).then(() => {
-  server.listen(3001, () => {
+  server.listen(3001, async () => {
+    console.log('%s Cargando los generos...');
+    const preload = await preGenres();
+    console.log('%s ' + preload);
     console.log('%s listening at 3001'); // eslint-disable-line no-console
   });
 });
