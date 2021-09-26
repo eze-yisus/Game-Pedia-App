@@ -2,9 +2,11 @@ const { Videogame, Genre } = require('../db');
 const { v4: uuidv4 } = require("uuid");
 const { Op } = require('sequelize');
 const axios = require('axios');
+const validate = require('uuid-validate');
 
 const URL_VIDEOGAMES = 'https://api.rawg.io/api/games?key=';
 const URL_SEARCH = 'https://api.rawg.io/api/games?search=';
+const URL_ID = 'https://api.rawg.io/api/games/';
 const API_KEY = 'fca4af1a9c604ace98083f869dd4b9e2';
 
 async function addVideogame(req, res, next) {
@@ -75,7 +77,7 @@ async function getVideogames(req, res, next) {
                     id: e.id,
                     name: e.name,
                     rating: e.rating,
-                    platforms: e.platforms.map((p) => p.platforms.name),
+                    platforms: e.platforms.map((p) => p.platform.name),
                     image: e.background_image,
                     genres: e.genres.map((g) => g.name)
                 }
@@ -93,7 +95,7 @@ async function getVideogames(req, res, next) {
                     id: e.id,
                     name: e.name,
                     rating: e.rating,
-                    platforms: e.platforms.map((p) => p.platforms.name),
+                    platforms: e.platforms.map((p) => p.platform.name),
                     image: e.background_image,
                     genres: e.genres.map((g) => g.name)
                 }
@@ -111,7 +113,13 @@ async function getVideogames(req, res, next) {
     }
 }
 
+async function getVideogameById(req, res, next) {
+    const { idGame } = req.params;
+    
+}
+
 module.exports = {
     addVideogame,
     getVideogames,
+    getVideogameById,
 }
