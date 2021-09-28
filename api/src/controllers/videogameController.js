@@ -52,10 +52,7 @@ async function getVideogameById(req, res, next) {
     } catch (error) {
         next(error);
     }
-
 }
-
-
 
 module.exports = {
     getVideogameById,
