@@ -24,7 +24,7 @@ async function getVideogameById(req, res, next) {
                     name: data.name,
                     description: data.description,
                     released: data.released,
-                    image: data.image,
+                    image: data.background_image,
                     rating: data.rating,
                     genres: data.genres.map(g => g.name),
                     platforms: data.platforms.map(p => p.platform.name),

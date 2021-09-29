@@ -46,7 +46,7 @@ export function getAllGames() {
         let info = await axios.get('http://localhost:3001/videogames');
         info = info.data;
         return dispatch({
-            type: GET_GENRES,
+            type: GET_ALL_GAMES,
             payload: info,
         });
     };
