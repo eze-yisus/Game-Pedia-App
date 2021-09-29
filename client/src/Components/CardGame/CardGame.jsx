@@ -6,9 +6,9 @@ export default function CardGame({ id, image, name, genres, rating, released }) 
         <div>
             <Link to={`/videogame/${id}`}>
                 <ul>
-                    <h2>{name}</h2>
+                    <h3>{name}</h3>
                     {genres.map(g => (<h4>{g.name}</h4>))}
-                    <img src={image} alt='imagen del videojuego' width='200px' height='200px' />
+                    <img src={image} alt='imagen del videojuego' width='250px' height='140px' key={id}/>
                 </ul>
             </Link>
         </div>

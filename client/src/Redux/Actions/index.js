@@ -10,12 +10,16 @@ export const CREATE_GAME = "CREATE_GAME";
 
 export function getGameByName(name) {
     return async function (dispatch) {
-        let info = await axios.get(`http://localhost:3001/videogames?name=${name}`);
-        info = info.data;
-        return dispatch({
-            type: GET_GAME_NAME,
-            payload: info,
-        });
+        try {
+            let info = await axios.get(`http://localhost:3001/videogames?name=${name}`);
+            info = info.data;
+            return dispatch({
+                type: GET_GAME_NAME,
+                payload: info,
+            });
+        } catch (error) {
+            console.log('Error! ', error)
+        }
     };
 }
 
