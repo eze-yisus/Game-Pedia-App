@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.background_page{
+    background: url('./image-landingPage2.jpg')  no-repeat center center fixed;
+    background-position: center center;
+    background-size: cover;
+    height: 657px;
+}
+
+.button{
+    margin-left: center;
+    margin-top: 520px;
+    border-radius: 10px;
+    font-size: 2rem;
+    font-family:'Press Start 2P', cursive;
+    padding: 10px;
+    color:black;
+    background-color: transparent;
+    transition: background-color 0.25s, color 0.25s;
+    border: solid 1px ;
+    cursor: pointer
+}
+
+.button:hover{
+    background-color: #ffffff48
+}
+
+.name{
+    position:relative;
+    font-size: 30px;
+    top: 70px;
+    color: rgb(170, 255, 0);
+    font-family: 'Press Start 2P', cursive;
+}
