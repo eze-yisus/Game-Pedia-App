@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { getAllGames, getGenres } from "../../Redux/Actions";
 import SearchBar from "../SearchBar/SearchBar";
 import CardGame from "../CardGame/CardGame";
+import './Home.css';
 
 
 export default function Home() {
@@ -26,11 +27,25 @@ export default function Home() {
     };
 
     return (
-        <div>
-            <Link to='/'>Inicio</Link>
-            <h1>Videojoooogooos!!!</h1>
+        <div className='back_image'>
+            <Link to='/videogame/add'><button className='create'>C r e a r  -  v i d e o j o g o !</button></Link>
+            <Link to='/'><button className='toHome'>Inicio</button></Link>
+            <div className='titulaso'>
+                <label>Videojoogoos!!!</label>
+            </div>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
             <button onClick={(e) => handleClick(e)} >Mostrar los joooogos!</button>
             <nav>
+                <br />
+                <br />
+                <br />
+                <br />
                 <SearchBar />
                 {allGames.map((a) => {
                     return (

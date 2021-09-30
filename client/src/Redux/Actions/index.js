@@ -58,10 +58,10 @@ export function getAllGames() {
 
 export function createGame(data) {
     return async function (dispatch) {
-        let info = await axios.get('http://localhost:3001/videogame/add', data);
+        let info = await axios.post('http://localhost:3001/videogame/add', data);
         info = info.data;
         return dispatch({
-            type: GET_ALL_GAMES,
+            type: CREATE_GAME,
             payload: info,
         });
     };

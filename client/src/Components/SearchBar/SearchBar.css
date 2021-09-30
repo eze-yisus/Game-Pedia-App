@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital@1&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.input{
+    border-radius: 5px;
+    width: 250px;
+    height: 25px;
+    position: absolute;
+    left: 150px;
+    top: 100px;
+}
+
+.input::placeholder{
+    color: rgb(129, 8, 129);
+    font-family: 'Press Start 2P', cursive;
+    font-size: 9px;
+}
+
+.texto{
+    position: absolute;
+    left: 25px;
+    top: 83px;
+    font-family: "Noto Sans", sans-serif;
+    color: rgb(63, 55, 55);
+    cursor:default ;
+}
+
+.search{
+    background: rgb(172, 131, 131);
+    height: 31px;
+    border-radius: 5px;
+    position: absolute;
+    left: 420px;
+    top: 100px;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 15px;
+    border: solid 1px;
+    cursor: pointer;
+}
+
+.search:hover{
+    background: transparent;
+}

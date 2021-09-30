@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from 'react-redux';
 import { getGameByName } from '../../Redux/Actions/index.js';
+import './SearchBar.css';
 
 export default function SearchBar() {
 
@@ -19,9 +20,12 @@ export default function SearchBar() {
 
 
     return (
-        <div>
-            <input type='text' placeholder='Buscar. . . ' onChange={(e) => handleInputChange(e)} />
-            <button onClick={(e) => handleClick(e)}>Buscar</button>
+        <div className='fondo'>
+            <div className='texto'>
+                <h4>Buscas un jogo?</h4>
+            </div>
+            <input className='input' type='text' placeholder=' Escríbalo usté . . . ' value={game} onChange={(e) => handleInputChange(e)} />
+            <button className='search' type='submit' onClick={(e) => handleClick(e)}>Buscar</button>
         </div>
     );
 }
