@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { getAllGames, getGenres } from "../../Redux/Actions";
 import SearchBar from "../SearchBar/SearchBar";
 import CardGame from "../CardGame/CardGame";
+import Pagination from "../Pagination/Pagination";
 import './Home.css';
 
 
@@ -16,6 +17,16 @@ export default function Home() {
 
     // const genres = useSelector((state) => state.genres);
 
+    const [currentPage, setCurrentPage] = useState(1);
+    const [gameXpage, setGameXpage] = useState(15);
+    const indexLastGamePage = currentPage * gameXpage;
+    const indexFirstGamePage = indexLastGamePage - gameXpage;
+    const currentGame = allGames.slice(indexFirstGamePage, indexLastGamePage);
+
+    const paginado = (numPage) => {
+        setCurrentPage(numPage)
+    };
+
     useEffect(() => {
         dispatch(getAllGames())
         dispatch(getGenres())
@@ -25,6 +36,30 @@ export default function Home() {
         e.preventDefault();
         dispatch(getAllGames())
     };
+
+    const handleClickPrev = (e) => {
+        e.preventDefault();
+    }
+
+
+    // const prev = (e) => {
+    //     e.preventDefault();
+    //     if (pages <= 0) {
+    //         setPages(0);
+    //     } else {
+    //         setPages(pages - 10)
+    //     }
+    // };
+
+    // const next = (e) => {
+    //     e.preventDefault();
+    //     if (allCountries.length < 10) {
+    //         return;
+    //     } else {
+    //         setPages(pages + 10);
+    //     }
+    // };
+
 
     return (
         <div className='back_image'>
@@ -36,10 +71,6 @@ export default function Home() {
             <br />
             <br />
             <br />
-            <br />
-            <br />
-            <br />
-            <br />
             <button onClick={(e) => handleClick(e)} >Mostrar los joooogos!</button>
             <nav>
                 <br />
@@ -47,9 +78,14 @@ export default function Home() {
                 <br />
                 <br />
                 <SearchBar />
-                {allGames.map((a) => {
+                <Pagination
+                    gameXpage={gameXpage}
+                    allGames={allGames.length}
+                    paginado={paginado}
+                />
+                {currentGame?.map((a) => {
                     return (
-                        <div>
+                        <div key={a.id}>
                             <Link to={'/home'}>
                                 <CardGame
                                     id={a.id}
@@ -57,7 +93,7 @@ export default function Home() {
                                     name={a.name}
                                     genres={a.genres}
 
-                                    key={a.id}
+                                    
                                 />
                             </Link>
                         </div>
@@ -65,6 +101,10 @@ export default function Home() {
                 })}
             </nav>
             <div>
+                <footer>
+                    <button>Prev</button>
+                    <button>Next</button>
+                </footer>
             </div>
         </div>
     )
