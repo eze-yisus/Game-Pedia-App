@@ -20,23 +20,25 @@ export default function Detail(props) {
 
     return (
         <div>
-            <Link to='/home'>
+            <Link to='/videogames'>
                 <button>Go Back!</button>
             </Link>
             {
                 gameDetail?.name ?
                     <>
-                        <h1>{gameDetail.name}</h1>
-                        <img src={gameDetail.image} alt='imagen del videojuego' width='350px' height='220px' />
-                        <h4>Released Data: {gameDetail.released}</h4>
-                        <p>Description: {gameDetail.description.replace(/(<([^>]+)>)/ig, '')}</p>
-                        <h4>Rating: {gameDetail.rating}</h4>
-                        <h4>Genres: {gameDetail.genres}</h4>
-                        <h4>Platforms: {gameDetail.platforms}</h4>
+                        <div>
+                            <div><h1>{gameDetail.name}</h1></div>
+                            <div><img src={gameDetail.image} alt='imagen del videojuego' width='350px' height='220px' /></div>
+                            <div><h4>Released Data: {gameDetail.released}</h4></div>
+                            <div><p>Description: {gameDetail.description.replace(/(<([^>]+)>)/ig, '')}</p></div>
+                            <div><h4>Rating: {gameDetail.rating}</h4></div>
+                            <div><h4>Genres: {gameDetail.genres.join(' - ')}</h4></div>
+                            <div><h4>Platforms: {gameDetail.platforms.join(' - ')}</h4></div>
+                        </div>
                     </>
                     :
                     <div>LOADING . . .</div>
             }
         </div>
-    );
+    )
 }

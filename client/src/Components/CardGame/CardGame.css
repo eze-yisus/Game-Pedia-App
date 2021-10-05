@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    align-content: center;
+}
+
+.contenedor .cartones {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    width: 250px;
+    text-align: center;
+    margin: 10px;
+    padding: 15px
+}
+
+.genero{
+    color:black;
+    font-size: small;
+}
+
+ul {
+    list-style-type:none;
+    padding:0 0 0 10px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+li {
+    font-size:12px;
+    padding:0 10px 0 0;
+}
+
+.foto {
+    border-radius: 5px;
+}
+
+.nombre {
+    color: black;
+    font-size: medium;
+}

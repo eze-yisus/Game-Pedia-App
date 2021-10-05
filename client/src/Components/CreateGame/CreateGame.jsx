@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import axios from "axios";
+// import axios from "axios";
 import { getGenres } from "../../Redux/Actions/index.js";
 
 const platforms = require("../../Utils/Platforms.json");
@@ -49,7 +49,7 @@ export default function CreateGame() {
         try {
             e.preventDefault(e);
             console.log(input);
-            var postGame = await axios.post('http://localhost:3001/videogame/add', input);
+            // var postGame = await axios.post('http://localhost:3001/videogame/add', input);
             setInput({
                 name: '',
                 description: '',
@@ -66,8 +66,8 @@ export default function CreateGame() {
 
     return (
         <div>
-            <Link to='/home'>
-                <button>Go home!</button>
+            <Link to='/videogames'>
+                <button>Go videogames!</button>
             </Link>
             <div>
                 <h1>Crea tu propio videojogo!</h1>

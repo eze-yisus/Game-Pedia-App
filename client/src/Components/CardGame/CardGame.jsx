@@ -1,17 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import './CardGame.css';
 
-export default function CardGame({ id, image, name, genres, rating, released }) {
+export default function CardGame({ id, image, name, genres }) {
     return (
-        <div>
-            <Link to={`/videogame/${id}`}>
-                <ul>
-                    <h3>{name}</h3>
-                    <h4>{genres}</h4>
-                    {/* {genres.map(g => (<div key={g.id}><h4>{g.name}</h4></div>))} */}
-                    <img src={image} alt='imagen del videojuego' width='250px' height='140px'/>
-                </ul>
-            </Link>
+        <div className='contenedorcartones'>
+            <div>
+                <h3 className='nombre'>{name}</h3>
+                <h4 className='genero'>{genres.join(' - ')}</h4>
+                <img className='foto' src={image} alt='imagen del videojuego' width='250px' height='140px' />
+            </div>
         </div>
     );
 }

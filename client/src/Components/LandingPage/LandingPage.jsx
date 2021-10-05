@@ -9,7 +9,7 @@ export default function LandingPage() {
                 <div className='name'>¡VIDEOJOGOS!</div>
             </div>
             <div>
-                <Link to='/home'>
+                <Link to='/videogames'>
                     <button className='button'>Entrar</button>
                 </Link>
             </div>
