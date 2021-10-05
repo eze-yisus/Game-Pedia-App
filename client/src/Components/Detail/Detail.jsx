@@ -16,7 +16,7 @@ export default function Detail(props) {
     }, [dispatch, idGame]);
 
 
-
+    const renso = false;
 
     return (
         <div>
