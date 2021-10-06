@@ -1,0 +1,108 @@
+.fondiu{
+    background: rgb(208, 193, 173);
+    background-position: center center;
+    height: 657px;
+}
+
+.detail{
+    display: block;
+    position: absolute;
+    margin: 30px;
+    top: 20px;
+    padding: 1.5em 3em;
+    font-family: helvetica neue, helvetica, sans-serif;
+    font-size: 0.75em;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: black;
+    border: 1px;
+    cursor: default;
+    background: burlywood;
+    border: 0.2em solid black;
+    border-radius: 0.3em;
+}
+
+.titleDetails{
+    font-size: 15px;
+    font-family: 'Press Start 2P', cursive;
+    color: rgb(28, 6, 28);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.imgDetails{
+    position: absolute;
+    display: flex;
+    overflow: hidden;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+    bottom: 135px;
+}
+
+.aboDetails{
+    position: relative;
+    overflow: hidden;
+    display: block;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    white-space: initial !important;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 10px;
+    line-height: 2em;
+    width: 500px;
+    height: 400px;
+    text-align:justify;
+    margin-left: 320px;
+    bottom: 10px;
+}
+
+.pDetails::first-letter{
+    font-size:35px  !important;
+    line-height:0 ;
+    margin-right:1px ;
+}
+
+.relDetails{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    width: 500px;
+    height: 400px;
+    top: 170px;
+    right: 495px;
+}
+
+.ratDetails{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    width: 613px;
+    height: 400px;
+    top: 200px;
+    right: 495px;
+}
+
+
+.genDetails{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    width: 509px;
+    height: 300px;
+    top: 280px;
+    right: 480px;
+}
