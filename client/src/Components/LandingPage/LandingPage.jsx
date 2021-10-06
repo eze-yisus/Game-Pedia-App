@@ -6,11 +6,11 @@ export default function LandingPage() {
     return (
         <div className='background_page'>
             <div>
-                <div className='name'>¡VIDEOJOGOS!</div>
+                <div className='name'>¿ READY ?</div>
             </div>
             <div>
                 <Link to='/videogames'>
-                    <button className='button'>Entrar</button>
+                    <button className='button'>GO ON!</button>
                 </Link>
             </div>
         </div>

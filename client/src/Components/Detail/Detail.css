@@ -1,5 +1,5 @@
 .fondiu{
-    background: rgb(208, 193, 173);
+    background:burlywood;
     background-position: center center;
     height: 657px;
 }
@@ -8,29 +8,33 @@
     display: block;
     position: absolute;
     margin: 30px;
+    left: 31px;
     top: 20px;
-    padding: 1.5em 3em;
+    padding: 2.5em 5em;
     font-family: helvetica neue, helvetica, sans-serif;
     font-size: 0.75em;
     font-weight: 600;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: black;
-    border: 1px;
     cursor: default;
-    background: burlywood;
+    background: rgb(206, 165, 112);
     border: 0.2em solid black;
     border-radius: 0.3em;
+    height: 500px;
+    width: 375px;
 }
 
 .titleDetails{
-    font-size: 15px;
-    font-family: 'Press Start 2P', cursive;
-    color: rgb(28, 6, 28);
-    display: flex;
+    position: relative;
+    display: block;
     flex-wrap: wrap;
+    font-size: 10px;
     justify-content: center;
     align-content: center;
+    font-family: 'Press Start 2P', cursive;
+    color: rgb(28, 6, 28);
+    bottom: 20px;
 }
 
 .imgDetails{
@@ -41,68 +45,106 @@
     justify-content: center;
     align-content: center;
     width: 300px;
-    height: 400px;
+    height: 230px;
     border-radius: 10px;
-    bottom: 135px;
+    bottom: 5px;
+    left: 98px;
+    top: 80px;
 }
 
 .aboDetails{
-    position: relative;
-    overflow: hidden;
-    display: block;
+    position: absolute;
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
     white-space: initial !important;
     font-family: 'Ubuntu', sans-serif;
     font-size: 10px;
-    line-height: 2em;
+    line-height: 1.4em;
     width: 500px;
-    height: 400px;
+    height: 500px;
     text-align:justify;
     margin-left: 320px;
-    bottom: 10px;
+    top:-1px;
+    left: 420px;
 }
 
-.pDetails::first-letter{
-    font-size:35px  !important;
-    line-height:0 ;
-    margin-right:1px ;
+
+.pDetails{
+    position: absolute;
+    border: 0.2em solid black;
+    padding: 4px;
+    padding-bottom: 1px;
+    padding-top: 25px;
+    border-radius: 0.3em;
+    background: rgb(206, 165, 112);
+
+}
+
+.pDetailsTitle{
+    position: absolute;
+    font-family: 'Press Start 2P', cursive;
+    top: 10px;
+    font-size:x-small;
+    left: 181px;
+    color: rgb(28, 6, 28);
 }
 
 .relDetails{
-    position: absolute;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-    width: 500px;
-    height: 400px;
-    top: 170px;
-    right: 495px;
+    position:absolute;
+    top: 330px;
+    left: 241px;
 }
 
 .ratDetails{
-    position: absolute;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-    width: 613px;
-    height: 400px;
-    top: 200px;
-    right: 495px;
+    position:absolute;
+    top: 330px;
+    left: 121px;
 }
 
-
 .genDetails{
+    position:absolute;
+    display:flex;
+    top: 400px;
+    left: 131px;
+}
+
+.platDetails{
+    position:absolute;
+    top: 480px;
+    left: 41px;
+}
+
+.showDescr{
     position: absolute;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-    width: 509px;
-    height: 300px;
-    top: 280px;
-    right: 480px;
+    cursor: pointer;
+    display: block;
+    left: 555px;
+    top: 150px;
+    width: 131px;
+    height: 46px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+.showDescr:hover{
+    background-color: burlywood;
+}
+
+.goBack{
+    position: absolute;
+    display: block;
+    cursor: pointer;
+    border: 1px solid;
+    border-radius: 4px;
+    font-size: 25px;
+    left: 618px;
+    top: 50px;
+    width: 131px;
+    height: 46px;
+}
+
+.goBack:hover{
+    background-color: burlywood;
 }

@@ -9,7 +9,6 @@ import './Home.css';
 
 export default function Home() {
 
-
     const dispatch = useDispatch();
 
     const allGames = useSelector((state) => state.videogames);
@@ -17,7 +16,7 @@ export default function Home() {
     // const genres = useSelector((state) => state.genres);
 
     const [currentPage, setCurrentPage] = useState(1);
-    const [postsPerPage, setPostsPerPage] = useState(12);
+    const [postsPerPage] = useState(12);
 
     const indexOfLastPost = currentPage * postsPerPage;
     const indexOfFirstPost = indexOfLastPost - postsPerPage;
@@ -31,7 +30,6 @@ export default function Home() {
         if (currentPage !== 1) setCurrentPage(currentPage - 1);
     };
 
-
     useEffect(() => {
         dispatch(getAllGames())
         dispatch(getGenres())
@@ -42,23 +40,21 @@ export default function Home() {
         dispatch(getAllGames())
     };
 
-
     return (
         <div className='back_image'>
-            <Link to='/videogame/add'><button className='create'>C r e a r  -  v i d e o j o g o !</button></Link>
-            <Link to='/'><button className='toHome'>Inicio</button></Link>
+            <Link to='/videogame/add'><button className='create'>Add your video game!</button></Link>
+            <Link to='/'><button className='toHome'>HOME</button></Link>
             <div className='titulaso'>
-                <label>Videojoogoos!!!</label>
+                <label>VIDEOGAMES!!!</label>
             </div>
             <br />
             <br />
             <br />
-            <button onClick={(e) => handleClick(e)} >Mostrar los joooogos!</button>
+            <button onClick={(e) => handleClick(e)} >Show games!</button>
             <SearchBar />
             <br />
             <br />
             <div className='contenedor'>
-                <br />
                 {currentPosts && currentPosts?.map((a) => {
                     return (
                         <div key={a.id}>
@@ -68,8 +64,6 @@ export default function Home() {
                                     image={a.image}
                                     name={a.name}
                                     genres={a.genres}
-
-
                                 />
                             </Link>
                         </div>

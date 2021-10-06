@@ -3,9 +3,10 @@
 .contenedor{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     padding: 10px;
     align-content: center;
+    background-color: rgb(206, 165, 112);
 }
 
 .contenedor .cartones {
@@ -16,7 +17,7 @@
     width: 250px;
     text-align: center;
     margin: 10px;
-    padding: 15px
+    padding: 5px
 }
 
 .genero{
@@ -24,23 +25,12 @@
     font-size: small;
 }
 
-ul {
-    list-style-type:none;
-    padding:0 0 0 10px;
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-li {
-    font-size:12px;
-    padding:0 10px 0 0;
-}
-
 .foto {
     border-radius: 5px;
 }
 
 .nombre {
-    color: black;
-    font-size: medium;
+    max-width: 250px;
+    text-transform: uppercase;
+    color: rgb(192, 12, 12);
 }

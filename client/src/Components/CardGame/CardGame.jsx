@@ -3,11 +3,19 @@ import './CardGame.css';
 
 export default function CardGame({ id, image, name, genres }) {
     return (
-        <div className='contenedorcartones'>
+        <div className='cartones'>
             <div>
-                <h3 className='nombre'>{name}</h3>
-                <h4 className='genero'>{genres.join(' - ')}</h4>
-                <img className='foto' src={image} alt='imagen del videojuego' width='250px' height='140px' />
+                <div>
+                    <img className='foto' src={image} alt='imagen del videojuego' width='250px' height='140px' />
+                </div>
+                <div>
+                    <div className='nombre'>
+                        <p>{name}</p>
+                    </div>
+                    <div className='genero'>
+                        <p>{genres.join(' - ')}</p>
+                    </div>
+                </div>
             </div>
         </div>
     );
