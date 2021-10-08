@@ -20,9 +20,17 @@
     padding: 5px
 }
 
+.cartones:hover{
+    box-shadow: 3px 2px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.10s ease-in;
+    background-color: rgb(186, 147, 95);
+    border-radius: 4px;
+}
+
 .genero{
-    color:black;
-    font-size: small;
+    color:rgba(48, 23, 48, 0.59);
+    font-size:medium;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .foto {
@@ -31,11 +39,14 @@
 
 .nombre {
     max-width: 250px;
+    font-family:'Press Start 2P' , cursive;
+    font-size:medium;
     text-transform: uppercase;
     color: rgb(192, 12, 12);
 }
 
 .rating{
-    color:black;
+    color:rgba(90, 16, 90, 0.604);
     font-size: small;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
 }

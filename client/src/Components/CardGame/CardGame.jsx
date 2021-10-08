@@ -24,7 +24,7 @@ export default function CardGame({ id, image, name, genres, rating }) {
                         </p>
                     </div>
                     <div className='rating'>
-                        <p>{rating}</p>
+                        <p>Rating: {rating}</p>
                     </div>
                 </div>
             </div>

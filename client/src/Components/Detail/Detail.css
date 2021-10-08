@@ -19,10 +19,17 @@
     color: black;
     cursor: default;
     background: rgb(206, 165, 112);
-    border: 0.2em solid black;
+    border: none;
     border-radius: 0.3em;
     height: 500px;
     width: 375px;
+    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.10s ease-in;
+}
+
+.detail:hover{
+    transition: all 0.17s ease-in;
+    box-shadow: 1px 2px 8px rgb(238, 84, 84);
 }
 
 .titleDetails{
@@ -33,7 +40,7 @@
     justify-content: center;
     align-content: center;
     font-family: 'Press Start 2P', cursive;
-    color: rgb(28, 6, 28);
+    color: rgb(192, 12, 12);
     bottom: 20px;
 }
 
@@ -73,78 +80,119 @@
 
 .pDetails{
     position: absolute;
-    border: 0.2em solid black;
+    border: none;
     padding: 4px;
     padding-bottom: 1px;
     padding-top: 25px;
     border-radius: 0.3em;
     background: rgb(206, 165, 112);
+    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.10s ease-in;
 
+}
+
+.pDetails:hover{
+    transition: all 0.17s ease-in;
+    box-shadow: 1px 2px 8px rgb(238, 84, 84);
 }
 
 .pDetailsTitle{
     position: absolute;
     font-family: 'Press Start 2P', cursive;
-    top: 10px;
+    top: -8px;
     font-size:x-small;
     left: 181px;
-    color: rgb(28, 6, 28);
+    color: rgb(192, 12, 12);
 }
 
 .relDetails{
     position:absolute;
-    top: 330px;
-    left: 241px;
+    top: 380px;
+    left: 305px;
+}
+
+.relDetailsTitle{
+    position:absolute;
+    bottom: 5px;
+    right: -20px;
+    color: rgb(146, 18, 18);
+    font-size: small;
+    font-family: 'Press Start 2P', cursive;
 }
 
 .ratDetails{
     position:absolute;
-    top: 330px;
+    top: 380px;
     left: 121px;
 }
 
+.ratDetailsTitle{
+    position:absolute;
+    left: -23px;
+    bottom: 17px;
+    color: rgb(146, 18, 18);
+    font-size: small;
+    font-family: 'Press Start 2P', cursive;
+}
+
+
 .genDetails{
     position:absolute;
-    display:flex;
-    top: 400px;
-    left: 131px;
+    top: 440px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+}
+
+.genDetailsTitle{
+    position:absolute;
+    color: rgb(146, 18, 18);
+    font-size: small;
+    font-family: 'Press Start 2P', cursive;
+    bottom: 0px;
+    top: -43px;
+    left: 0px;
+    right: 0px;
 }
 
 .platDetails{
     position:absolute;
-    top: 480px;
-    left: 41px;
+    top: 510px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
 }
 
-.showDescr{
-    position: absolute;
-    cursor: pointer;
+.platDetailsTitle{
+    position:absolute;
+    color: rgb(146, 18, 18);
+    font-size: small;
+    font-family: 'Press Start 2P', cursive;
+    left: 5px;
+    right: 0px;
+    bottom: 0px;
+    top: -43px;
     display: block;
-    left: 555px;
-    top: 150px;
-    width: 131px;
-    height: 46px;
-    border: 1px solid;
-    border-radius: 5px;
-}
-
-.showDescr:hover{
-    background-color: burlywood;
 }
 
 .goBack{
     position: absolute;
-    display: block;
     cursor: pointer;
-    border: 1px solid;
+    border: none;
     border-radius: 4px;
-    font-size: 25px;
+    font-size: 14px;
     left: 618px;
     top: 50px;
     width: 131px;
     height: 46px;
+    box-shadow: 3px 2px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.17s ease-in;
+    background-color: rgb(206, 165, 112);
+    font-family: 'Press Start 2P', cursive;
+    color: rgba(19, 18, 18, 0.891);
 }
 
 .goBack:hover{
-    background-color: burlywood;
+    background-color: #bd7a6e7e;
+    color: rgba(65, 35, 35, 0.891);
 }
