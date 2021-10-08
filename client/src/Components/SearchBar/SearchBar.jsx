@@ -20,9 +20,9 @@ export default function SearchBar() {
 
 
     return (
-        <div className='fondo'>
+        <div>
             <div className='texto'>
-                <h4>R U looking 4 a game?</h4>
+                <h4>Looking for a game?</h4>
             </div>
             <input className='input' type='text' placeholder=' Write it yourself. . . . . . ' value={game} onChange={(e) => handleInputChange(e)} />
             <button className='search' type='submit' onClick={(e) => handleClick(e)}>Search</button>

@@ -34,3 +34,8 @@
     text-transform: uppercase;
     color: rgb(192, 12, 12);
 }
+
+.rating{
+    color:black;
+    font-size: small;
+}

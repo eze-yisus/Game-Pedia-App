@@ -5,8 +5,8 @@ export const GET_GAMES_ID = "GET_GAMES_ID";
 export const GET_GENRES = "GET_GENRES";
 export const GET_ALL_GAMES = "GET_ALL_GAMES";
 export const CREATE_GAME = "CREATE_GAME";
-// export const ORDER_FILTER = "ORDER_FILTER";
-// export const GENRES_FILTER = "GENRES_FILTER";
+export const ORDER_FILTER = "ORDER_FILTER";
+export const GENRES_FILTER = "GENRES_FILTER";
 
 export function getGameByName(name) {
     return async function (dispatch) {
@@ -63,6 +63,24 @@ export function createGame(data) {
         return dispatch({
             type: CREATE_GAME,
             payload: info,
+        });
+    };
+}
+
+export function orderFilter(type) {
+    return async function (dispatch) {
+        return dispatch({
+            type: ORDER_FILTER,
+            payload: type,
+        });
+    };
+}
+
+export function filterGenres(data) {
+    return async function (dispatch) {
+        return dispatch({
+            type: GENRES_FILTER,
+            payload: data,
         });
     };
 }

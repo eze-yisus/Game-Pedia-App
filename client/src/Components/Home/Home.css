@@ -6,26 +6,30 @@
 }
 
 .create {
-    border-radius: 5px;
+    border-radius: 4px;
     position: absolute;
     top: 90px;
     right: 25px;
     font-family: "Noto Sans", sans-serif;
-    background: rgb(172, 131, 131);
+    background: rgb(206, 165, 112);
     height: 31px;
     font-size: 15px;
-    border: solid 1px;
+    border: none;
     cursor: pointer;
     width: 250px;
+    color: rgb(63, 55, 55);
+    box-shadow: 3px 2px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.17s ease-in;
 }
 
 .create:hover{
-    background: transparent
+    background-color: #a0402d7e;
+    color: #082032;
 }
 
 .toHome{
     position: absolute;
-    border: solid 1px;
+    border: none;
     font-family: "Noto Sans", sans-serif;
     font-size: 20px;
     right: 250px;
@@ -33,12 +37,15 @@
     cursor: pointer;
     background-color: rgb(206, 165, 112);
     top: 30px;
-    border-radius: 5px;
+    border-radius: 4px;
     display: block;
+    box-shadow: 3px 2px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.17s ease-in;
 }
 
 .toHome:hover{
-    background: transparent;
+    background-color: #bd7a6e7e;
+    color: #082032;
 }
 
 .titulaso{

@@ -1,23 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital@1&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-.fondo{
-    background-color:rgb(206, 165, 112);
-    height: 40px;
-}
-
 .input{
-    border-radius: 5px;
+    border-radius: 4px;
     width: 200px;
     height: 25px;
     position: absolute;
     left: 200px;
     top: 90px;
     background-color: transparent;
+    border: solid 1px;
 }
 
 .input::placeholder{
-    color: rgb(129, 8, 129);
+    color: rgba(129, 8, 129, 0.59);
     font-size: 17px;
     font-family: "Noto Sans", sans-serif;
 }
@@ -25,7 +21,7 @@
 .texto{
     position: absolute;
     display: block;
-    left: 25px;
+    left: 35px;
     top: 75px;
     font-family: "Noto Sans", sans-serif;
     color: rgb(63, 55, 55);
@@ -33,18 +29,22 @@
 }
 
 .search{
-    background: rgb(172, 131, 131);
+    background: rgb(206, 165, 112);
+    color: rgb(63, 55, 55);
     height: 31px;
-    border-radius: 5px;
+    border-radius: 4px;
     position: absolute;
     left: 420px;
     top: 90px;
     font-family: "Noto Sans", sans-serif;
     font-size: 15px;
-    border: solid 1px;
+    border: none;
     cursor: pointer;
+    box-shadow: 3px 2px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.17s ease-in;
 }
 
 .search:hover{
-    background: transparent;
+    background-color: #ff907a7e;
+    color: #082032;
 }

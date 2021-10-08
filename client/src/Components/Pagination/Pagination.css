@@ -1,0 +1,23 @@
+.naval{
+    margin: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navalBut{
+    outline: none;
+    border: none;
+    margin-left: 9px;
+    padding: 9px 12px;
+    font-weight: bold;
+    background-color: rgb(206, 165, 112);
+    color: rgb(63, 55, 55);
+    cursor: pointer;
+    box-shadow: 3px 2px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.17s ease-in;
+    border-radius: 4px;
+}
+
+.navalBut:hover{
+    background-color: #ff4d29b3;
+    color: #082032;
+}

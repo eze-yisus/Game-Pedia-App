@@ -8,24 +8,40 @@ const URL_VIDEOGAMES = 'https://api.rawg.io/api/games?key=';
 const API_KEY = 'fca4af1a9c604ace98083f869dd4b9e2';
 
 async function addVideogame(req, res, next) {
-    const { name, description, released, rating, platforms, genres, image } = req.body;
+    const element = req.body;
 
-    try {
-        const newGame = await Videogame.create({
-            id: uuidv4(),
-            name: name,
-            description: description,
-            released: released,
-            rating: rating,
-            platforms: platforms,
-            image: image,
-        });
+    return Videogame
+        .create({
+            ...element,
+        })
+        .then((game) => {
+            game.addGenres(element.genres);
+        })
+        .then((created) => {
+            return res.json(created).send(created)
+        })
 
-        await newGame.addGenres(genres);
-        res.json(newGame);
-    } catch (error) {
-        next(error);
-    }
+
+
+
+    // const { name, description, released, rating, platforms, genres, image } = req.body;
+
+    // try {
+    //     const newGame = await Videogame.create({
+    //         id: uuidv4(),
+    //         name: name,
+    //         description: description,
+    //         released: released,
+    //         rating: rating,
+    //         platforms: platforms,
+    //         image: image,
+    //     });
+
+    //     await newGame.addGenres(genres);
+    //     res.json(newGame);
+    // } catch (error) {
+    //     next(error);
+    // }
 }
 
 async function getVideogames(req, res, next) {

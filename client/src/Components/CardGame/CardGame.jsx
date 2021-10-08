@@ -1,7 +1,14 @@
 import React from "react";
 import './CardGame.css';
 
-export default function CardGame({ id, image, name, genres }) {
+export default function CardGame({ image, name, genres, rating }) {
+
+    let genresArray = genres;
+
+    genresArray = Object.keys(genresArray).map((name) => {
+        return genresArray[name] + ' ';
+    })
+
     return (
         <div className='cartones'>
             <div>
@@ -13,7 +20,10 @@ export default function CardGame({ id, image, name, genres }) {
                         <p>{name}</p>
                     </div>
                     <div className='genero'>
-                        <p>{genres.join(' - ')}</p>
+                        <p>{genres.name}</p>
+                    </div>
+                    <div className='rating'>
+                        <p>{rating}</p>
                     </div>
                 </div>
             </div>

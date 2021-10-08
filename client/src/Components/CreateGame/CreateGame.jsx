@@ -1,68 +1,58 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-// import axios from "axios";
-import { getGenres } from "../../Redux/Actions/index.js";
-
-const platforms = require("../../Utils/Platforms.json");
+import { getGenres, createGame } from "../../Redux/Actions/index.js";
+import { useHistory } from "react-router";
 
 export default function CreateGame() {
 
     const dispatch = useDispatch();
-    const genres = useSelector((state) => state.genres);
+    const history = useHistory();
+    const genres = useSelector((state) => state.genres)
+
     const [input, setInput] = useState({
         name: '',
         description: '',
         released: '',
         rating: '',
-        genres: [],
+        image: '',
         platforms: [],
+        genres: [],
     });
 
     useEffect(() => {
-        dispatch(getGenres())
+        dispatch(getGenres());
     }, [dispatch]);
 
     const handleChange = (e) => {
         setInput({
             ...input,
-            [e.target.name]: e.target.value
-        })
-        // console.log(input)
-    }
+            [e.target.name]: e.target.value,
+        });
+    };
 
-    const handleSelect = (e) => {
+    const handleGenres = (e) => {
         setInput({
             ...input,
-            genres: [...input.genres, e.target.value]
-        })
-    }
+            genres: [...input.genres, e.target.value],
+        });
+    };
 
-    const handleSelectPlat = (e) => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        dispatch(createGame(input));
+        alert('Game loaded successfully');
         setInput({
-            ...input,
-            platforms: [...input.platforms, e.target.value]
+            name: '',
+            description: '',
+            released: '',
+            rating: '',
+            image: '',
+            platforms: [],
+            genres: [],
         })
-    }
-
-    const handleSubmit = async (e) => {
-        try {
-            e.preventDefault(e);
-            console.log(input);
-            // var postGame = await axios.post('http://localhost:3001/videogame/add', input);
-            setInput({
-                name: '',
-                description: '',
-                released: '',
-                rating: '',
-                genres: [],
-                platforms: [],
-            })
-            alert('Videojogo creado con rotundo éxito')
-        } catch (error) {
-            alert('Error: videojogo no creado... ' + error)
-        }
-    }
+        history.push('/videogames');
+    };
 
     return (
         <div>
@@ -70,70 +60,103 @@ export default function CreateGame() {
                 <button>Go videogames!</button>
             </Link>
             <div>
-                <h1>Crea tu propio videojogo!</h1>
-                <form onSubmit={(e) => handleSubmit(e)}>
+                <h3>Add your own game</h3>
+            </div>
+            <div>
+                <form onSubmit={handleSubmit}>
                     <div>
-                        <input placeholder='Nombre del jogo'
-                            autoComplete='off'
+                        <label>Name</label>
+                        <input
+                            placeholder='Name of the game . . .'
                             type='text'
                             name='name'
-                            required='required'
+                            onChange={handleChange}
                             value={input.name}
-                            onChange={(e) => handleChange(e)}
+                            autoComplete='off'
+                            required
                         />
                     </div>
                     <div>
-                        <input placeholder='Descripción del jogo'
-                            autoComplete='off'
-                            type='text'
+                        <label>Description</label>
+                        <textarea
+                            placeholder='Description of the game . . .'
                             name='description'
-                            required='required'
+                            onChange={handleChange}
                             value={input.description}
-                            onChange={(e) => handleChange(e)}
+                            autoComplete='off'
+                            required
                         />
                     </div>
                     <div>
-                        <input placeholder='Fecha de la creación del jogo'
-                            autoComplete='off'
-                            type='text'
+                        <label>Released</label>
+                        <input
+                            type='date'
                             name='released'
-                            required='required'
+                            onChange={handleChange}
                             value={input.released}
-                            onChange={(e) => handleChange(e)}
-                        />
-                    </div>
-                    <div>
-                        <input placeholder='Raing del jogo (1 - 10)'
                             autoComplete='off'
-                            min='1' max='10'
-                            type='number'
-                            name='rating'
-                            required='required'
-                            value={input.rating}
-                            onChange={(e) => handleChange(e)}
                         />
                     </div>
                     <div>
-                        <select onChange={(e) => handleSelect(e)} required='required'>
-                            <option>Genres</option>
-                            {
-                                genres.map((g) => (
-                                    <option value={g.id}>{g.name}</option>
-                                ))
-                            }
-                        </select>
+                        <label>Image</label>
+                        <input
+                            placeholder='Add an image URL for your game . . .'
+                            type='text'
+                            name='image'
+                            onChange={handleChange}
+                            value={input.image}
+                            autoComplete='off'
+                            required
+                        />
                     </div>
                     <div>
-                        <select onChange={(e) => handleSelectPlat(e)} required='required'>
-                            <option>Platforms</option>
-                            {
-                                platforms.map((p) => (
-                                    <option value={p.name}>{p.name}</option>
-                                ))
-                            }
-                        </select>
+                        <label>Rating</label>
+                        <input
+                            placeholder='Rate your game (1-10) . . .'
+                            type='number'
+                            min='0'
+                            max='10'
+                            name='rating'
+                            onChange={handleChange}
+                            value={input.rating}
+                            autoComplete='off'
+                        />
                     </div>
-                    <button type='submit'>Crear!</button>
+                    <div>
+                        <label>Platforms</label>
+                        <input
+                            placeholder='Select the platforms of your game . . .'
+                            type='text'
+                            name='platforms'
+                            onChange={handleChange}
+                            value={input.platforms}
+                            autoComplete='off'
+                            required
+                        />
+                    </div>
+                    <div>
+                        <label>Genres</label>
+                        <div>
+                            <select
+                                name='genres'
+                                multiple='multiple'
+                                onChange={handleGenres}
+                                required
+                            >
+                                {genres.map((g) => {
+                                    return <option key={g.id} value={g.id}>{g.name}</option>
+                                })}
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        Hold CTRL key to select multiple genres
+                    </div>
+                    <div>
+                        <button type='submit'>
+                            <span>SUBMIT</span>
+                        </button>
+                    </div>
                 </form>
             </div>
         </div>
