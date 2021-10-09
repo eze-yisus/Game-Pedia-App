@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getGenres, orderFilter, filterGenres } from "../../Redux/Actions/index.js";
+import './Filters.css';
 
 export default function Filters() {
 
@@ -23,8 +24,8 @@ export default function Filters() {
     }
 
     return (
-        <div>
-            <div>
+        <div className='divGlobal'>
+            <div className='orderBy'>
                 <select defaultValue={'DEFAULT'} name='Orders' onChange={handleChange}>
                     <option value='DEFAULT' disabled>Order by . . .</option>
                     <option value='ALL'>All</option>
@@ -36,7 +37,7 @@ export default function Filters() {
                     <option value='DB'>Games from DB</option>
                 </select>
             </div>
-            <div>
+            <div className='filterBy'>
                 <select defaultValue={'DEFAULT'} name='Filters' onChange={handleGenres}>
                     <option value='DEFAULT' disabled>Filter by . . .</option>
                     <option value='ALL'>All</option>

@@ -1,6 +1,9 @@
 .naval{
     margin: 5px;
     font-family: 'Poppins', sans-serif;
+    position: absolute;
+    top: 95px;
+    right: 45px;
 }
 
 .navalBut{

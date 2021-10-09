@@ -20,7 +20,7 @@ export default function SearchBar() {
 
 
     return (
-        <div>
+        <div className='margen'>
             <div className='texto'>
                 <h4>Looking for a game?</h4>
             </div>

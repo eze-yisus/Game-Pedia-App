@@ -54,21 +54,23 @@ export default function Home() {
             <Link to='/videogame/add'><button className='create'>Add your video game!</button></Link>
             <Link to='/'><button className='toHome'>HOME</button></Link>
             <div className='titulaso'>
-                <label>VIDEOGAMES!!!</label>
+                <label>GAME-PEDIA</label>
             </div>
-            <br />
             <br />
             <br />
             <br />
             <SearchBar />
             <br />
-            <button onClick={(e) => handleClick(e)} >Reset filters</button>
             <Filters />
+            <button className='resetFilterBut' onClick={(e) => handleClick(e)} >Reset</button>
+            <br />
             <Pagination
                 postsPerPage={postsPerPage}
                 totalPosts={posts.length}
                 setCurrentPage={setCurrentPage}
             />
+            <br />
+            <br />
             <div className='contenedor'>
                 {currentPosts && currentPosts?.map((a) => {
                     return (

@@ -1,13 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital@1&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
+.margen{
+    position: absolute;
+    left: 500px;
+    top: 50px;
+    padding: 6px 5px 12px;
+    color: black;
+    background: rgba(201, 162, 112, 0.734);
+    border: none;
+    border-radius: 0.3em;
+    height: 45px;
+    width: 290px;
+    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.10s ease-in;
+}
+
 .input{
+    position: relative;
     border-radius: 4px;
     width: 200px;
     height: 25px;
-    position: absolute;
-    left: 200px;
-    top: 90px;
+    right: 10px;
+    bottom: 50px;
     background-color: transparent;
     border: solid 1px;
 }
@@ -19,28 +34,27 @@
 }
 
 .texto{
-    position: absolute;
-    display: block;
-    left: 35px;
-    top: 75px;
+    position: relative;
+    right: 70px;
+    bottom: 25px;
     font-family: "Noto Sans", sans-serif;
     color: rgb(63, 55, 55);
     cursor:default ;
 }
 
 .search{
-    background: rgb(206, 165, 112);
-    color: rgb(63, 55, 55);
-    height: 31px;
+    position: relative;
+    background: rgba(202, 155, 94, 0.707);
+    color: rgb(36, 33, 33);
+    height: 45px;
     border-radius: 4px;
-    position: absolute;
-    left: 420px;
-    top: 90px;
+    left: 10px;
+    bottom: 63px;
     font-family: "Noto Sans", sans-serif;
     font-size: 15px;
     border: none;
     cursor: pointer;
-    box-shadow: 3px 2px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 3px 2px 8px rgba(0, 0, 0, 0.398);
     transition: all 0.17s ease-in;
 }
 
