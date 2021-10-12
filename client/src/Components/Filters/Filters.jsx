@@ -26,7 +26,7 @@ export default function Filters() {
     return (
         <div className='divGlobal'>
             <div className='orderBy'>
-                <select defaultValue={'DEFAULT'} name='Orders' onChange={handleChange}>
+                <select className='selecOrder' defaultValue={'DEFAULT'} name='Orders' onChange={handleChange}>
                     <option value='DEFAULT' disabled>Order by . . .</option>
                     <option value='ALL'>All</option>
                     <option value='A-Z'>A - Z</option>
@@ -38,7 +38,7 @@ export default function Filters() {
                 </select>
             </div>
             <div className='filterBy'>
-                <select defaultValue={'DEFAULT'} name='Filters' onChange={handleGenres}>
+                <select className='selecFil' defaultValue={'DEFAULT'} name='Filters' onChange={handleGenres}>
                     <option value='DEFAULT' disabled>Filter by . . .</option>
                     <option value='ALL'>All</option>
                     {genres?.map((g) => (

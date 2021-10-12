@@ -7,7 +7,7 @@ const URL_VIDEOGAMES = 'https://api.rawg.io/api/games?key=';
 // const URL_SEARCH = 'https://api.rawg.io/api/games?search=';
 const API_KEY = 'fca4af1a9c604ace98083f869dd4b9e2';
 
-async function addVideogame(req, res, next) {
+async function addVideogame(req, res, _next) {
     const element = req.body;
 
     return Videogame
