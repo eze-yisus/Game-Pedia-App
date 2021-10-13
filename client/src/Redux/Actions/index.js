@@ -7,6 +7,7 @@ export const GET_ALL_GAMES = "GET_ALL_GAMES";
 export const CREATE_GAME = "CREATE_GAME";
 export const ORDER_FILTER = "ORDER_FILTER";
 export const GENRES_FILTER = "GENRES_FILTER";
+export const GENRES_PLATFOR = "GENRES_PLATFOR";
 
 export function getGameByName(name) {
     return async function (dispatch) {
@@ -84,3 +85,13 @@ export function filterGenres(data) {
         });
     };
 }
+
+export function filterPlatform(data) {
+    return async function (dispatch) {
+        return dispatch({
+            type: GENRES_PLATFOR,
+            payload: data,
+        });
+    };
+}
+
