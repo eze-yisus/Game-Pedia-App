@@ -3,7 +3,7 @@ const axios = require('axios');
 const validate = require('uuid-validate');
 
 const URL_ID = 'https://api.rawg.io/api/games/';
-const API_KEY = 'fca4af1a9c604ace98083f869dd4b9e2';
+const API_KEY = 'cf4d79b38e5649e3b1b692405e877549';
 
 
 async function getVideogameById(req, res, next) {

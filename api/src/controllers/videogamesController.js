@@ -5,7 +5,7 @@ const axios = require('axios');
 
 const URL_VIDEOGAMES = 'https://api.rawg.io/api/games?key=';
 // const URL_SEARCH = 'https://api.rawg.io/api/games?search=';
-const API_KEY = 'fca4af1a9c604ace98083f869dd4b9e2';
+const API_KEY = 'cf4d79b38e5649e3b1b692405e877549';
 
 async function addVideogame(req, res, _next) {
     const element = req.body;

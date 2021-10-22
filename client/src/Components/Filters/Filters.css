@@ -7,7 +7,7 @@
     background: rgb(206, 165, 112);
     border: none;
     border-radius: 0.3em;
-    height: 60px;
+    height: 40px;
     width: 260px;
     box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.3);
     transition: all 0.10s ease-in;
@@ -23,11 +23,6 @@
     right: 51px;
 }
 
-.filterByPlat{
-    position: relative;
-    right: 51px;
-}
-
 .selecFil{
     color:rgba(250, 248, 248, 0.775);
     background-color: rgb(145, 119, 85);
@@ -36,13 +31,6 @@
 }
 
 .selecOrder{
-    color:rgba(250, 248, 248, 0.775);
-    background-color: rgb(145, 119, 85);
-    border: none;
-    border-radius: 4px;
-}
-
-.selecPlat{
     color:rgba(250, 248, 248, 0.775);
     background-color: rgb(145, 119, 85);
     border: none;

@@ -8,7 +8,6 @@ const initialState = {
     filteredGames: [],
     orderedBy: 'ALL',
     filteredBy: 'ALL',
-    platforsFilter: 'ALL',
 };
 
 export default function reducer(state = initialState, action) {
@@ -54,22 +53,6 @@ export default function reducer(state = initialState, action) {
                         f.genres.includes(action.payload)
                     ),
                     filteredBy: action.payload,
-                };
-            };
-        case GENRES_PLATFOR:
-            if (action.payload === 'ALL') {
-                return {
-                    ...state,
-                    filteredGames: state.videogames,
-                    platforsFilter: action.payload,
-                };
-            } else {
-                return {
-                    ...state,
-                    filteredGames: state.videogames.filter((f) => 
-                        f.platforms.includes(action.payload)
-                    ),
-                    platforsFilter: action.payload,
                 };
             };
         case ORDER_FILTER:
