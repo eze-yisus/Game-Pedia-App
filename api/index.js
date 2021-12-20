@@ -23,7 +23,7 @@ const { preGenres } = require('./src/controllers/genreController')
 
 // Syncing all the models at once.
 conn.sync({ force: true }).then(() => {
-  server.listen(process.env.PORT || 3001, () => {
+  server.listen(process.env.PORT || 3001, async () => {
     console.log('%s Cargando los generos...');
     const preload = await preGenres();
     console.log('%s ' + preload);
