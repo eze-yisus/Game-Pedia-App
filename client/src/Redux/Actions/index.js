@@ -11,7 +11,7 @@ export const GENRES_FILTER = "GENRES_FILTER";
 export function getGameByName(name) {
     return async function (dispatch) {
         try {
-            let info = await axios.get(`http://localhost:3001/videogames?name=${name}`);
+            let info = await axios.get(`/videogames?name=${name}`);
             info = info.data;
             return dispatch({
                 type: GET_GAME_NAME,
@@ -25,7 +25,7 @@ export function getGameByName(name) {
 
 export function getGameById(id) {
     return async function (dispatch) {
-        let info = await axios.get(`http://localhost:3001/videogame/${id}`);
+        let info = await axios.get(`/videogame/${id}`);
         info = info.data;
         return dispatch({
             type: GET_GAMES_ID,
@@ -36,7 +36,7 @@ export function getGameById(id) {
 
 export function getGenres() {
     return async function (dispatch) {
-        let info = await axios.get('http://localhost:3001/genres');
+        let info = await axios.get('/genres');
         info = info.data;
         return dispatch({
             type: GET_GENRES,
@@ -47,7 +47,7 @@ export function getGenres() {
 
 export function getAllGames() {
     return async function (dispatch) {
-        let info = await axios.get('http://localhost:3001/videogames');
+        let info = await axios.get('/videogames');
         info = info.data;
         return dispatch({
             type: GET_ALL_GAMES,
@@ -58,7 +58,7 @@ export function getAllGames() {
 
 export function createGame(data) {
     return async function (dispatch) {
-        let info = await axios.post('http://localhost:3001/videogame/add', data);
+        let info = await axios.post('/videogame/add', data);
         info = info.data;
         return dispatch({
             type: CREATE_GAME,
