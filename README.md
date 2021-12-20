@@ -50,4 +50,4 @@ You can take a look at some images of this app below 🔻
   <img height="400" src="./Add.jpg" />
 </p>
 
-You can take a look at this page [here] (https://game-pedia-app.vercel.app/)
+You can take a look at this page here --> https://game-pedia-app.vercel.app/
