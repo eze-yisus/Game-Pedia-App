@@ -1,4 +1,4 @@
-import { GET_GAME_NAME, GET_GAMES_ID, GET_GENRES, GET_ALL_GAMES, CREATE_GAME, ORDER_FILTER, GENRES_FILTER, GENRES_PLATFOR } from "../Actions/index.js";
+import { GET_GAME_NAME, GET_GAMES_ID, GET_GENRES, GET_ALL_GAMES, CREATE_GAME, ORDER_FILTER, GENRES_FILTER } from "../Actions/index.js";
 
 const initialState = {
     genres: [],

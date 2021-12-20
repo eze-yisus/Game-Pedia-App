@@ -9,20 +9,20 @@
 
 .button{
     margin-left: center;
-    margin-top: 520px;
-    border-radius: 10px;
-    font-size: 2rem;
+    margin-top: 450px;
+    border-radius: 25px;
+    font-size: 1.5rem;
     font-family:'Press Start 2P', cursive;
     padding: 10px;
     color:black;
-    background-color: transparent;
+    background-color: rgba(242, 255, 0, 0.576);
     transition: background-color 0.25s, color 0.25s;
-    border: solid 1px ;
+    border: solid 3px ;
     cursor: pointer
 }
 
 .button:hover{
-    background-color: #ffffff48
+    background-color: rgba(170, 255, 0, 0.261)
 }
 
 .name{

@@ -40,9 +40,9 @@ export default function Home() {
 
     // FILTRADO y PAGINADO (componente) ---
 
-    useEffect(() => {
-        dispatch(getAllGames())
-    }, [dispatch]);
+    // useEffect(() => {
+    //     dispatch(getAllGames())
+    // }, [dispatch]);
 
     const handleClick = (e) => {
         e.preventDefault();
